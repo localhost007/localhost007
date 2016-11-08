@@ -3,14 +3,18 @@
 <head>
   <meta charset="utf-8">
   
-  <title>Label: dev-env | Hexo</title>
+  <title>python string 2 timestamp and timestamp 2 string | Hexo</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta property="og:type" content="website">
-<meta property="og:title" content="Hexo">
-<meta property="og:url" content="http://yoursite.com/tags/dev-env/index.html">
+  <meta name="description" content="desc title">
+<meta property="og:type" content="article">
+<meta property="og:title" content="python string 2 timestamp and timestamp 2 string">
+<meta property="og:url" content="http://yoursite.com/2016/11/08/python-string-2-timestamp-and-timestamp-2-string/index.html">
 <meta property="og:site_name" content="Hexo">
+<meta property="og:description" content="desc title">
+<meta property="og:updated_time" content="2016-11-08T13:36:07.518Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Hexo">
+<meta name="twitter:title" content="python string 2 timestamp and timestamp 2 string">
+<meta name="twitter:description" content="desc title">
   
     <link rel="alternate" href="/atom.xml" title="Hexo" type="application/atom+xml">
   
@@ -59,39 +63,61 @@
   </div>
 </header>
       <div class="outer">
-        <section id="main">
-  
-  
-    
-    
-      
-      
-      <section class="archives-wrap">
-        <div class="archive-year-wrap">
-          <a href="/archives/2016" class="archive-year">2016</a>
-        </div>
-        <div class="archives">
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      <a href="/2016/10/31/install-c-c-dev-env/" class="archive-article-date">
-  <time datetime="2016-10-31T08:04:49.000Z" itemprop="datePublished">Oct 31</time>
+        <section id="main"><article id="post-python-string-2-timestamp-and-timestamp-2-string" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2016/11/08/python-string-2-timestamp-and-timestamp-2-string/" class="article-date">
+  <time datetime="2016-11-08T13:27:56.000Z" itemprop="datePublished">2016-11-08</time>
 </a>
-      
+    
+  <div class="article-category">
+    <a class="article-category-link" href="/categories/python/">python</a>
+  </div>
+
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
   
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2016/10/31/install-c-c-dev-env/">install c/c++ dev env</a>
+    <h1 class="article-title" itemprop="name">
+      python string 2 timestamp and timestamp 2 string
     </h1>
   
 
-    </header>
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>###string 2 timestamp<br>1.先将string转换成time_struct<br>2.再将time_struct转换成timestamp</p>
+<p>###timestamp 2 string<br>1.先将timestamp转换成time_struct<br>2.再将time_struct转换成string</p>
+<p>####PS.无论哪种转换，都需要先转换成time_struct</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">import</span> time</div><div class="line"></div><div class="line"><span class="function"><span class="keyword">def</span> <span class="title">str2timestamp</span><span class="params">(s,f=<span class="string">'%Y%m%d%H%M%S'</span>)</span>:</span></div><div class="line">    <span class="keyword">return</span> int(time.mktime(time.strptime(s,f)))</div><div class="line"><span class="function"><span class="keyword">def</span> <span class="title">timestamp2str</span><span class="params">(t,f=<span class="string">'%Y-%m-%d %H:%M:%S'</span>)</span>:</span></div><div class="line">    <span class="keyword">return</span> time.strftime(f,time.localtime(t))</div></pre></td></tr></table></figure>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://yoursite.com/2016/11/08/python-string-2-timestamp-and-timestamp-2-string/" data-id="civ9jigqb0006z0p5wd6qcfy7" class="article-share-link">Delen</a>
+      
+      
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/python/">python</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/time/">time</a></li></ul>
+
+    </footer>
   </div>
+  
+    
+<nav id="article-nav">
+  
+  
+    <a href="/2016/10/31/python-install-easy-install-and-pip-offline/" id="article-nav-older" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Ouder</strong>
+      <div class="article-nav-title">python 离线安装easy_install和pip</div>
+    </a>
+  
+</nav>
+
+  
 </article>
-  
-  
-    </div></section>
-  
 
 </section>
         
