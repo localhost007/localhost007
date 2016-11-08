@@ -48,9 +48,9 @@
       </nav>
       <nav id="sub-nav">
         
-          <a id="nav-rss-link" class="nav-icon" href="/atom.xml" title="RSS Feed"></a>
+          <a id="nav-rss-link" class="nav-icon" href="/atom.xml" title="Flux RSS"></a>
         
-        <a id="nav-search-btn" class="nav-icon" title="Zoeken"></a>
+        <a id="nav-search-btn" class="nav-icon" title="Rechercher"></a>
       </nav>
       <div id="search-form-wrap">
         <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" results="0" class="search-form-input" placeholder="Search"><button type="submit" class="search-form-submit">&#xF002;</button><input type="hidden" name="sitesearch" value="http://yoursite.com"></form>
@@ -87,15 +87,14 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <p>###string 2 timestamp<br>1.先将string转换成time_struct<br>2.再将time_struct转换成timestamp</p>
-<p>###timestamp 2 string<br>1.先将timestamp转换成time_struct<br>2.再将time_struct转换成string</p>
-<p>####PS.无论哪种转换，都需要先转换成time_struct</p>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">import</span> time</div><div class="line"></div><div class="line"><span class="function"><span class="keyword">def</span> <span class="title">str2timestamp</span><span class="params">(s,f=<span class="string">'%Y%m%d%H%M%S'</span>)</span>:</span></div><div class="line">    <span class="keyword">return</span> int(time.mktime(time.strptime(s,f)))</div><div class="line"><span class="function"><span class="keyword">def</span> <span class="title">timestamp2str</span><span class="params">(t,f=<span class="string">'%Y-%m-%d %H:%M:%S'</span>)</span>:</span></div><div class="line">    <span class="keyword">return</span> time.strftime(f,time.localtime(t))</div></pre></td></tr></table></figure>
+        <h3 id="string-2-timestamp"><a href="#string-2-timestamp" class="headerlink" title="string 2 timestamp"></a>string 2 timestamp</h3><p>1.先将string转换成time_struct<br>2.再将time_struct转换成timestamp</p>
+<h3 id="timestamp-2-string"><a href="#timestamp-2-string" class="headerlink" title="timestamp 2 string"></a>timestamp 2 string</h3><p>1.先将timestamp转换成time_struct<br>2.再将time_struct转换成string</p>
+<h4 id="PS-无论哪种转换，都需要先转换成time-struct"><a href="#PS-无论哪种转换，都需要先转换成time-struct" class="headerlink" title="PS.无论哪种转换，都需要先转换成time_struct"></a>PS.无论哪种转换，都需要先转换成time_struct</h4><figure class="highlight python"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">import</span> time</div><div class="line"></div><div class="line"><span class="function"><span class="keyword">def</span> <span class="title">str2timestamp</span><span class="params">(s,f=<span class="string">'%Y%m%d%H%M%S'</span>)</span>:</span></div><div class="line">    <span class="keyword">return</span> int(time.mktime(time.strptime(s,f)))</div><div class="line"><span class="function"><span class="keyword">def</span> <span class="title">timestamp2str</span><span class="params">(t,f=<span class="string">'%Y-%m-%d %H:%M:%S'</span>)</span>:</span></div><div class="line">    <span class="keyword">return</span> time.strftime(f,time.localtime(t))</div></pre></td></tr></table></figure>
 
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2016/11/08/python-string-2-timestamp-and-timestamp-2-string/" data-id="civ9jigqb0006z0p5wd6qcfy7" class="article-share-link">Delen</a>
+      <a data-url="http://yoursite.com/2016/11/08/python-string-2-timestamp-and-timestamp-2-string/" data-id="civ9jigqb0006z0p5wd6qcfy7" class="article-share-link">Partager</a>
       
       
   <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/python/">python</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/time/">time</a></li></ul>
@@ -133,16 +132,15 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <p>####先安装easy_install</p>
-<p><em>下载源码包:<a href="https://pypi.python.org/pypi/ez_setup" target="_blank" rel="external">https://pypi.python.org/pypi/ez_setup</a>
+        <h4 id="先安装easy-install"><a href="#先安装easy-install" class="headerlink" title="先安装easy_install"></a>先安装easy_install</h4><p><em>下载源码包:<a href="https://pypi.python.org/pypi/ez_setup" target="_blank" rel="external">https://pypi.python.org/pypi/ez_setup</a>
 </em>解压，安装<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ python ez_setup.py</div></pre></td></tr></table></figure></p>
-<p>####再安装pip<br><em>下载源码包:<a href="https://pypi.python.org/pypi/pip" target="_blank" rel="external">https://pypi.python.org/pypi/pip</a>
+<h4 id="再安装pip"><a href="#再安装pip" class="headerlink" title="再安装pip"></a>再安装pip</h4><p><em>下载源码包:<a href="https://pypi.python.org/pypi/pip" target="_blank" rel="external">https://pypi.python.org/pypi/pip</a>
 </em>解压，安装<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ python setup.py install</div></pre></td></tr></table></figure></p>
 
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2016/10/31/python-install-easy-install-and-pip-offline/" data-id="civ9jigq30004z0p5s3e5k0ww" class="article-share-link">Delen</a>
+      <a data-url="http://yoursite.com/2016/10/31/python-install-easy-install-and-pip-offline/" data-id="civ9jigq30004z0p5s3e5k0ww" class="article-share-link">Partager</a>
       
       
   <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/easy-install/">easy_install</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/pip/">pip</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/python/">python</a></li></ul>
@@ -187,7 +185,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2016/10/31/install-c-c-dev-env/" data-id="civ9jigpv0001z0p5tmrlx925" class="article-share-link">Delen</a>
+      <a data-url="http://yoursite.com/2016/10/31/install-c-c-dev-env/" data-id="civ9jigpv0001z0p5tmrlx925" class="article-share-link">Partager</a>
       
       
   <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/dev-env/">dev-env</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/yum/">yum</a></li></ul>
@@ -236,7 +234,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2016/10/25/sort-sort-by-mul-field/" data-id="civ9jigqg0009z0p5qrmbx2z0" class="article-share-link">Delen</a>
+      <a data-url="http://yoursite.com/2016/10/25/sort-sort-by-mul-field/" data-id="civ9jigqg0009z0p5qrmbx2z0" class="article-share-link">Partager</a>
       
       
   <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/command/">command</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/shell/">shell</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/sort/">sort</a></li></ul>
@@ -279,7 +277,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2016/10/25/sort-tab/" data-id="civ9jigrc0014z0p50qpwtkw1" class="article-share-link">Delen</a>
+      <a data-url="http://yoursite.com/2016/10/25/sort-tab/" data-id="civ9jigrc0014z0p50qpwtkw1" class="article-share-link">Partager</a>
       
       
   <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/command/">command</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/shell/">shell</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/sort/">sort</a></li></ul>
@@ -322,7 +320,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2016/10/25/find-more-path-in-one-command/" data-id="civ9jigpp0000z0p59bf78w2i" class="article-share-link">Delen</a>
+      <a data-url="http://yoursite.com/2016/10/25/find-more-path-in-one-command/" data-id="civ9jigpp0000z0p59bf78w2i" class="article-share-link">Partager</a>
       
       
   <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/command/">command</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/find/">find</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/shell/">shell</a></li></ul>
@@ -369,7 +367,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2016/10/24/hello-world/" data-id="civ9jigq60005z0p5kf67v414" class="article-share-link">Delen</a>
+      <a data-url="http://yoursite.com/2016/10/24/hello-world/" data-id="civ9jigq60005z0p5kf67v414" class="article-share-link">Partager</a>
       
       
     </footer>
@@ -386,7 +384,7 @@
   
     
   <div class="widget-wrap">
-    <h3 class="widget-title">Categorieën</h3>
+    <h3 class="widget-title">Catégories</h3>
     <div class="widget">
       <ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/categories/Linux/">Linux</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/python/">python</a></li></ul>
     </div>
@@ -396,7 +394,7 @@
   
     
   <div class="widget-wrap">
-    <h3 class="widget-title">Labels</h3>
+    <h3 class="widget-title">Mot-clés</h3>
     <div class="widget">
       <ul class="tag-list"><li class="tag-list-item"><a class="tag-list-link" href="/tags/command/">command</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/dev-env/">dev-env</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/easy-install/">easy_install</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/find/">find</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/pip/">pip</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/python/">python</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/shell/">shell</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/sort/">sort</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/time/">time</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/yum/">yum</a></li></ul>
     </div>
@@ -406,7 +404,7 @@
   
     
   <div class="widget-wrap">
-    <h3 class="widget-title">Tag Cloud</h3>
+    <h3 class="widget-title">Nuage de mot-clés</h3>
     <div class="widget tagcloud">
       <a href="/tags/command/" style="font-size: 20px;">command</a> <a href="/tags/dev-env/" style="font-size: 10px;">dev-env</a> <a href="/tags/easy-install/" style="font-size: 10px;">easy_install</a> <a href="/tags/find/" style="font-size: 10px;">find</a> <a href="/tags/pip/" style="font-size: 10px;">pip</a> <a href="/tags/python/" style="font-size: 15px;">python</a> <a href="/tags/shell/" style="font-size: 20px;">shell</a> <a href="/tags/sort/" style="font-size: 15px;">sort</a> <a href="/tags/time/" style="font-size: 10px;">time</a> <a href="/tags/yum/" style="font-size: 10px;">yum</a>
     </div>
@@ -415,7 +413,7 @@
   
     
   <div class="widget-wrap">
-    <h3 class="widget-title">Archieven</h3>
+    <h3 class="widget-title">Archives</h3>
     <div class="widget">
       <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/11/">November 2016</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/10/">October 2016</a></li></ul>
     </div>
@@ -425,7 +423,7 @@
   
     
   <div class="widget-wrap">
-    <h3 class="widget-title">Recente berichten</h3>
+    <h3 class="widget-title">Articles récents</h3>
     <div class="widget">
       <ul>
         
@@ -462,7 +460,7 @@
   <div class="outer">
     <div id="footer-info" class="inner">
       &copy; 2016 localhost007<br>
-      Powered by <a href="http://hexo.io/" target="_blank">Hexo</a>
+      Propulsé by <a href="http://hexo.io/" target="_blank">Hexo</a>
     </div>
   </div>
 </footer>
